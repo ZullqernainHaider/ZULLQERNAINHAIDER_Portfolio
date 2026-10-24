@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Dark Tech Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+
+    <!-- WP Blue to Shopify Green Gradient for Border & Dot -->
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#21759B" /> <!-- WP Blue -->
+      <stop offset="100%" stop-color="#95BF47" /> <!-- Shopify Green -->
+    </linearGradient>
+  </defs>
+
+  <!-- Base Card -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  
+  <!-- Glowing Gradient Border -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="none" stroke="url(#brandGrad)" stroke-width="12" opacity="0.8" />
+
+  <!-- Urdu Letter "ذ" -->
+  <text x="50%" y="62%" font-family="&#39;Noto Nastaliq Urdu&#39;, &#39;Jameel Noori Nastaleeq&#39;, &#39;Arabic Typesetting&#39;, &#39;Arial Custom&#39;, sans-serif" font-size="340" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">
+    ذ
+  </text>
+</svg>

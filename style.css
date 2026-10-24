@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f2fe, #fff);
+    margin: 0;
+    padding: 50px 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #e5e8eb;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+h1 {
+    text-align: center;
+    color: 1e3a8a;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h2{
+    color: #2563eb;
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom:12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #dbeafe;
+}
+
+p {
+    color:black;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+ul{
+    padding-left:25px;
+    line-height: 1.8;
+}
+
+li {
+    color:#000000;
+    margin-bottom: 5px
+}
+
+a {
+    color: #0000FF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #1d4ed8;
+    text-decoration:underline;
+}
+
+h1:hover {
+    color: #1d4ed8;
+    transition: 0.3s;
+}
+
+@media (max-width: 600px){
+    .container{
+        padding: 25px;
+        border-radius: 15px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 15px;
+    }
+}
+/* C:\Users\aaa\Desktop\practice\ZULLQERNAIN HAIDER Portfolio site */

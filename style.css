@@ -1,83 +1,149 @@
+:root {
+    --bg-primary: #090d16;
+    --bg-elevated: #111827;
+    --accent-cyan: #38bdf8;
+    --accent-emerald: #10b981;
+    --border-subtle: rgba(30, 41, 59, 0.85);
+}
+
+/* Base Document Polish */
+html {
+    scroll-padding-top: 5rem;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #e0f2fe, #fff);
-    margin: 0;
-    padding: 50px 20px;
-    color: #333;
+    background-color: var(--bg-primary);
+    color: #f8fafc;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
 }
 
-.container {
-    max-width: 700px;
-    margin: auto;
-    background-color: white;
-    padding: 40px;
-    border-radius: 20px;
-    border: 1px solid #e5e8eb;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+/* Custom Minimal Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-h1 {
-    text-align: center;
-    color: 1e3a8a;
-    font-size: 36px;
-    margin-bottom: 10px;
+::-webkit-scrollbar-track {
+    background: #060911;
 }
 
-h2{
-    color: #2563eb;
-    font-size: 22px;
-    margin-top: 30px;
-    margin-bottom:12px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #dbeafe;
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 9999px;
 }
 
-p {
-    color:black;
-    font-size: 16px;
-    line-height: 1.6;
+::-webkit-scrollbar-thumb:hover {
+    background: #38bdf8;
 }
 
-ul{
-    padding-left:25px;
-    line-height: 1.8;
+/* Architectural Grid Background */
+.bg-grid-pattern {
+    background-size: 44px 44px;
+    background-image: 
+        linear-gradient(to right, rgba(30, 41, 59, 0.35) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(30, 41, 59, 0.35) 1px, transparent 1px);
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, #000 65%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, #000 65%, transparent 100%);
 }
 
-li {
-    color:#000000;
-    margin-bottom: 5px
+/* Scroll Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
 }
 
-a {
-    color: #0000FF;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-a:hover {
-    color: #1d4ed8;
-    text-decoration:underline;
+.delay-100 { transition-delay: 90ms; }
+.delay-200 { transition-delay: 180ms; }
+.delay-300 { transition-delay: 270ms; }
+
+/* Interactive Cursor Spotlight Card Effect */
+.spotlight-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-h1:hover {
-    color: #1d4ed8;
-    transition: 0.3s;
+.spotlight-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        480px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(56, 189, 248, 0.08),
+        transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
 }
 
-@media (max-width: 600px){
-    .container{
-        padding: 25px;
-        border-radius: 15px;
+.spotlight-card:hover::before {
+    opacity: 1;
+}
+
+.spotlight-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(56, 189, 248, 0.35);
+}
+
+/* Modern CSS :has() Interactive Service Selection Chips */
+.service-chip:has(input:checked) {
+    border-color: var(--accent-cyan);
+    background-color: rgba(14, 165, 233, 0.12);
+    box-shadow: 0 0 20px -5px rgba(56, 189, 248, 0.25);
+}
+
+.service-chip:has(input:checked) .chip-box {
+    background-color: var(--accent-cyan);
+    border-color: var(--accent-cyan);
+}
+
+.service-chip:has(input:checked) .chip-check {
+    opacity: 1;
+}
+
+.service-chip:has(input:focus-visible) {
+    outline: 2px solid var(--accent-cyan);
+    outline-offset: 2px;
+}
+
+/* Active Navigation Pill State */
+.nav-link.active {
+    color: #ffffff;
+    background-color: rgba(30, 41, 59, 0.9);
+}
+
+/* Portfolio Filtering Transitions */
+.project-card {
+    transition: opacity 0.35s ease, transform 0.35s ease, border-color 0.3s ease;
+}
+
+.project-card.hidden-card {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+    position: absolute;
+    visibility: hidden;
+}
+
+/* Respect User Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
-    h1 {
-        font-size: 28px;
-    }
-    h2 {
-        font-size: 18px;
-    }
-    p {
-        font-size: 15px;
+    .reveal {
+        opacity: 1;
+        transform: none;
     }
 }
-/* C:\Users\aaa\Desktop\practice\ZULLQERNAIN HAIDER Portfolio site */

@@ -1,34 +1,914 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZULLQERNAIN HAIDER Personal Profile Web Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Zullqernain Haider | WordPress & Shopify Website Developer</title>
+    <meta name="title" content="Zullqernain Haider | WordPress & Shopify Website Developer">
+    <meta name="description" content="Portfolio of Zullqernain Haider, a professional Website Developer specializing in high-converting Shopify stores, custom WordPress websites, WooCommerce, and speed-optimized e-commerce solutions.">
+    <meta name="keywords" content="Zullqernain Haider, Website Developer, WordPress Developer, Shopify Developer, E-Commerce Website Developer, WooCommerce Expert, Elementor Developer, Frontend Web Developer">
+    <meta name="author" content="Zullqernain Haider">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#090d16">
+    <link rel="canonical" href="https://github.com/zullqernainhaider">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://linkedin.com/in/zullqernainhaider">
+    <meta property="og:title" content="Zullqernain Haider | WordPress & Shopify Website Developer">
+    <meta property="og:description" content="Building fast, minimal, and high-converting WordPress websites and Shopify e-commerce stores that scale brands.">
+    <meta property="og:image" content="profile.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zullqernain Haider | WordPress & Shopify Website Developer">
+    <meta name="twitter:description" content="Building fast, minimal, and high-converting WordPress websites and Shopify e-commerce stores that scale brands.">
+    <meta name="twitter:image" content="profile.jpg">
+
+    <!-- JSON-LD Structured Data for Google Rich Results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "#zullqernain-haider",
+          "name": "Zullqernain Haider",
+          "jobTitle": "Website Developer (WordPress & Shopify Specialist)",
+          "url": "https://github.com/zullqernainhaider",
+          "image": "profile.jpg",
+          "sameAs": [
+            "https://www.linkedin.com/in/zullqernainhaider",
+            "https://github.com/zullqernainhaider"
+          ],
+          "knowsAbout": [
+            "WordPress Development",
+            "Shopify Store Development",
+            "E-Commerce Websites",
+            "WooCommerce",
+            "Elementor",
+            "Shopify Liquid",
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Technical SEO"
+          ]
+        },
+        {
+          "@type": "ProfessionalService",
+          "name": "Zullqernain Haider Web Development",
+          "provider": {
+            "@id": "#zullqernain-haider"
+          },
+          "areaServed": "Worldwide",
+          "serviceType": [
+            "E-Commerce Website Development",
+            "Shopify Store Setup & Customization",
+            "WordPress Website Design & Development",
+            "Speed & Conversion Rate Optimization"
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        surface: {
+                            950: '#060911',
+                            900: '#090d16',
+                            800: '#111827',
+                            700: '#1e293b',
+                        },
+                        brand: {
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                        },
+                        shopify: '#10b981',
+                        wordpress: '#3b82f6'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <h1>ZULLQERNAIN HAIDER</h1>
-        <h2>About Me:</h2>
-        <p>
-            ZULLQERNAIN HAIDER is detailed oriented, responsible and committed electronics engineer. My intellectual curiosity also drives me to be a lifelong learner.
-        </p>
-        <h2>My Skills:</h2>
-        <ul>
-            <li>HTML / CSS / Javascript</li>
-            <li>Python</li>
-            <li>Agentic AI</li>
-            <li>Digital Marketing</li>
-            <li>SEO</li>
-            <li>MERN Stack</li>
-        </ul>
-        <h2>Contact Us:</h2>
-        <p>
-            you can contact me through email: 
-            <a href="mailtozullqernainhaider@gmail.com">
-                Email Me
-            </a>
-        </p>
-    </div>
+<body class="bg-surface-900 text-slate-100 antialiased selection:bg-brand-500 selection:text-white relative overflow-x-hidden">
+
+    <!-- Top Reading Progress Bar -->
+    <div id="scroll-progress" class="fixed top-0 left-0 h-0.5 bg-gradient-to-r from-brand-400 via-indigo-400 to-emerald-400 z-[60] w-0 transition-all duration-75" aria-hidden="true"></div>
+
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[70] focus:bg-brand-500 focus:text-slate-950 focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold">
+        Skip to main content
+    </a>
+
+    <!-- Navigation Header -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-xl bg-surface-900/75 border-b border-slate-800/80" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <nav class="flex items-center justify-between h-20" aria-label="Main Navigation">
+                <!-- Brand Logo -->
+                <a href="#" class="text-lg md:text-xl font-extrabold tracking-tight text-white flex items-center gap-3 group focus:outline-none">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-500 to-emerald-400 p-[1px] transition-transform duration-300 group-hover:scale-105">
+                        <div class="w-full h-full bg-surface-900 rounded-[11px] flex items-center justify-center">
+                            <span class="font-mono text-xs font-bold bg-gradient-to-r from-brand-400 to-emerald-400 bg-clip-text text-transparent">ZH</span>
+                        </div>
+                    </div>
+                    <span>ZULLQERNAIN H<span class="text-brand-400 font-mono ">.</span></span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex items-center gap-1 lg:gap-2 bg-slate-900/90 border border-slate-800/90 rounded-full px-3 py-1.5">
+                    <a href="#about" class="nav-link text-slate-400 hover:text-white px-4 py-1.5 rounded-full text-sm font-medium transition-all">About</a>
+                    <a href="#services" class="nav-link text-slate-400 hover:text-white px-4 py-1.5 rounded-full text-sm font-medium transition-all">Services</a>
+                    <a href="#skills" class="nav-link text-slate-400 hover:text-white px-4 py-1.5 rounded-full text-sm font-medium transition-all">Stack</a>
+                    <a href="#projects" class="nav-link text-slate-400 hover:text-white px-4 py-1.5 rounded-full text-sm font-medium transition-all">Work</a>
+                    <a href="#contact" class="nav-link text-slate-400 hover:text-white px-4 py-1.5 rounded-full text-sm font-medium transition-all">Contact</a>
+                </div>
+
+                <!-- Right CTA & Social Quick Icons -->
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="https://github.com/zullqernainhaider" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="p-2.5 text-slate-400 hover:text-white hover:bg-slate-800/70 rounded-full transition-colors">
+                        <i class="ph ph-github-logo text-xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/zullqernainhaider" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="p-2.5 text-slate-400 hover:text-brand-400 hover:bg-slate-800/70 rounded-full transition-colors">
+                        <i class="ph ph-linkedin-logo text-xl"></i>
+                    </a>
+                    <a href="#contact" class="bg-white hover:bg-slate-200 text-slate-950 px-5 py-2.5 rounded-full text-sm font-bold transition-all flex items-center gap-2 shadow-sm">
+                        <span>Start a Project</span>
+                        <i class="ph-bold ph-arrow-up-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Trigger -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle Menu" class="text-slate-300 hover:text-white focus:outline-none p-2 rounded-lg border border-slate-800 bg-slate-900/80">
+                        <i class="ph ph-list text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div class="md:hidden hidden bg-surface-900/95 backdrop-blur-2xl border-b border-slate-800 px-6 pt-3 pb-6 space-y-2" id="mobile-menu">
+            <a href="#about" class="mobile-link block text-slate-300 hover:text-white py-2.5 text-base font-medium border-b border-slate-800/50">About</a>
+            <a href="#services" class="mobile-link block text-slate-300 hover:text-white py-2.5 text-base font-medium border-b border-slate-800/50">Services</a>
+            <a href="#skills" class="mobile-link block text-slate-300 hover:text-white py-2.5 text-base font-medium border-b border-slate-800/50">Skills & Tech</a>
+            <a href="#projects" class="mobile-link block text-slate-300 hover:text-white py-2.5 text-base font-medium border-b border-slate-800/50">Featured Work</a>
+            <a href="#contact" class="mobile-link block text-slate-300 hover:text-white py-2.5 text-base font-medium">Contact & Inquiry</a>
+            <div class="pt-4 flex items-center justify-between gap-4">
+                <a href="#contact" class="mobile-link flex-1 bg-brand-500 text-slate-950 text-center py-3 rounded-xl font-bold text-sm">
+                    Book a Consultation
+                </a>
+                <a href="https://linkedin.com/in/zullqernainhaider" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="p-3 rounded-xl bg-slate-800 text-slate-200">
+                    <i class="ph ph-linkedin-logo text-xl"></i>
+                </a>
+                <a href="https://github.com/zullqernainhaider" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="p-3 rounded-xl bg-slate-800 text-slate-200">
+                    <i class="ph ph-github-logo text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 lg:pt-44 lg:pb-32 overflow-hidden min-h-[92vh] flex items-center bg-grid-pattern">
+            <!-- Subtle Ambient Lighting -->
+            <div class="absolute top-20 left-1/4 w-[28rem] h-[28rem] bg-brand-500/10 rounded-full blur-[130px] pointer-events-none" aria-hidden="true"></div>
+            <div class="absolute bottom-10 right-1/4 w-[26rem] h-[26rem] bg-emerald-500/10 rounded-full blur-[130px] pointer-events-none" aria-hidden="true"></div>
+
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
+                <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-16">
+                    
+                    <!-- Hero Copywriting -->
+                    <div class="w-full lg:w-3/5 text-center lg:text-left reveal">
+                        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-800/70 border border-slate-700/70 backdrop-blur-md mb-6">
+                            <span class="relative flex h-2.5 w-2.5">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                            </span>
+                            <span class="text-xs font-mono uppercase tracking-wider text-slate-300">Available for New Projects & Retainers</span>
+                        </div>
+
+                        <p class="font-mono text-brand-400 text-sm md:text-base font-medium tracking-wide uppercase mb-3">
+                            Zullqernain Haider &bull; Website Developer
+                        </p>
+
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-[1.12]">
+                            Building high-converting <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-sky-300 to-emerald-400">WordPress &amp; Shopify</span> experiences.
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto lg:mx-0 mb-9 leading-relaxed">
+                            I help ambitious brands, startups, and e-commerce founders turn visitors into loyal customers through fast, minimal, and SEO-engineered websites built on <strong class="text-slate-200 font-semibold">WordPress</strong>, <strong class="text-slate-200 font-semibold">Shopify</strong>, and modern web standards.
+                        </p>
+
+                        <!-- Primary Hero CTAs -->
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="#contact" class="bg-brand-500 hover:bg-brand-400 text-slate-950 px-8 py-4 rounded-full font-bold text-base transition-all flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(14,165,233,0.3)] hover:shadow-[0_0_35px_rgba(14,165,233,0.5)]">
+                                <span>Start Your Project</span>
+                                <i class="ph-bold ph-arrow-right"></i>
+                            </a>
+                            <a href="#projects" class="bg-slate-900/90 hover:bg-slate-800 text-white px-8 py-4 rounded-full font-semibold text-base border border-slate-700/80 transition-all flex items-center justify-center gap-2">
+                                <i class="ph-bold ph-browsers text-brand-400"></i>
+                                <span>Explore Portfolio</span>
+                            </a>
+                        </div>
+
+                        <!-- Platform Trust Strip -->
+                        <div class="mt-12 pt-8 border-t border-slate-800/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-slate-400 text-sm">
+                            <div class="flex items-center gap-2">
+                                <i class="ph-fill ph-check-circle text-emerald-400 text-lg"></i>
+                                <span>Custom WordPress &amp; WooCommerce</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="ph-fill ph-check-circle text-brand-400 text-lg"></i>
+                                <span>High-ROI Shopify Storefronts</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="ph-fill ph-check-circle text-sky-400 text-lg"></i>
+                                <span>95+ Core Web Vitals</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Portrait Card -->
+                    <div class="w-full lg:w-2/5 flex justify-center reveal delay-200">
+                        <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 group">
+                            <!-- Subtle Rotating Ring -->
+                            <div class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-brand-500/25 via-transparent to-emerald-500/25 blur-xl opacity-80 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+                            
+                            <!-- Portrait Container (Uses uploaded profile.jpg with graceful fallback) -->
+                            <div class="relative w-full h-full rounded-3xl overflow-hidden border border-slate-700/80 bg-slate-800 shadow-2xl">
+                                <img 
+                                    src="zullqernainhaider.jpg" 
+                                    alt="Zullqernain Haider - WordPress and Shopify Website Developer" 
+                                    width="400" 
+                                    height="400"
+                                    fetchpriority="high"
+                                    onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Zullqernain+Haider&background=0f172a&color=38bdf8&size=512&font-size=0.33&bold=true';"
+                                    class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
+                                >
+                                <div class="absolute inset-0 bg-gradient-to-t from-surface-950/80 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-surface-900/85 backdrop-blur-md border border-slate-700/70 px-4 py-3 rounded-2xl">
+                                    <div>
+                                        <p class="text-xs font-mono text-brand-400 uppercase">Specialist</p>
+                                        <p class="text-sm font-bold text-white">WordPress &amp; Shopify</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <a href="https://linkedin.com/in/zullqernainhaider" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-brand-500 hover:text-slate-950 flex items-center justify-center text-slate-300 transition-colors">
+                                            <i class="ph-fill ph-linkedin-logo"></i>
+                                        </a>
+                                        <a href="https://github.com/zullqernainhaider" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-white hover:text-slate-950 flex items-center justify-center text-slate-300 transition-colors">
+                                            <i class="ph-fill ph-github-logo"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Floating Badge Top Left -->
+                            <div class="absolute -top-4 -left-4 bg-surface-900/95 border border-slate-700/80 px-4 py-2.5 rounded-2xl shadow-xl backdrop-blur-md flex items-center gap-2.5">
+                                <i class="ph-fill ph-storefront text-emerald-400 text-xl"></i>
+                                <div>
+                                    <p class="text-[11px] text-slate-400 leading-none">E-Commerce</p>
+                                    <p class="text-xs font-bold text-white mt-0.5">Conversion Focused</p>
+                                </div>
+                            </div>
+
+                            <!-- Floating Badge Top Right -->
+                            <div class="absolute -bottom-4 -right-4 bg-surface-900/95 border border-slate-700/80 px-4 py-2.5 rounded-2xl shadow-xl backdrop-blur-md flex items-center gap-2.5">
+                                <i class="ph-fill ph-lightning text-brand-400 text-xl"></i>
+                                <div>
+                                    <p class="text-[11px] text-slate-400 leading-none">Performance</p>
+                                    <p class="text-xs font-bold text-white mt-0.5">SEO &amp; Speed Ready</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Value Proposition Section -->
+        <section id="about" class="py-24 bg-surface-950 border-t border-slate-800/80 relative">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Column: Story & Mission -->
+                    <div class="lg:col-span-7 reveal">
+                        <span class="font-mono text-xs uppercase tracking-widest text-brand-400 block mb-2">// 01. About Me</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+                            Minimal design meets scalable e-commerce architecture.
+                        </h2>
+                        <div class="space-y-4 text-slate-400 text-base md:text-lg leading-relaxed">
+                            <p>
+                                I Specialize as a <strong class="text-white font-semibold">WordPress Developer</strong>, By combining custom code with strategic design, I launch scalable E-commerce websites that turn casual visitors into loyal buyers.
+                            </p>
+                            <p>
+                                As a Freelance Web Developer, I partner with e-commerce brands, agencies, and small business owners across the USA, UK, UAE, Australia, and Canada. Most clients struggle with slow, rigid templates that fail to capture sales; I solve this by engineering fast, highly customized digital storefronts.
+                            </p>
+                            <p>
+                                Send me a message with your project details, and let’s build something great together!
+
+                            </p>
+                        </div>
+
+                        <!-- Key Metrics Strip -->
+                        <div class="mt-8 grid grid-cols-3 gap-4 sm:gap-6">
+                            <div class="p-4 sm:p-5 rounded-2xl bg-surface-900 border border-slate-800/90">
+                                <p class="text-2xl sm:text-3xl font-extrabold text-white">100%</p>
+                                <p class="text-xs sm:text-sm text-slate-400 mt-1">Responsive &amp; Mobile-First</p>
+                            </div>
+                            <div class="p-4 sm:p-5 rounded-2xl bg-surface-900 border border-slate-800/90">
+                                <p class="text-2xl sm:text-3xl font-extrabold text-brand-400">SEO</p>
+                                <p class="text-xs sm:text-sm text-slate-400 mt-1">Semantic &amp; Schema Ready</p>
+                            </div>
+                            <div class="p-4 sm:p-5 rounded-2xl bg-surface-900 border border-slate-800/90">
+                                <p class="text-2xl sm:text-3xl font-extrabold text-emerald-400">24/7</p>
+                                <p class="text-xs sm:text-sm text-slate-400 mt-1">Clear Client Communication</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Workflow Bento Cards -->
+                    <div class="lg:col-span-5 grid grid-cols-1 gap-4 reveal delay-200">
+                        <div class="spotlight-card p-6 rounded-2xl bg-surface-900 border border-slate-800/90 flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400 shrink-0">
+                                <i class="ph-bold ph-compass text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-1">1. Strategy &amp; UX Wireframing</h3>
+                                <p class="text-sm text-slate-400 leading-relaxed">Mapping user journeys, clear navigation hierarchies, and frictionless checkout flows before writing a single line of code.</p>
+                            </div>
+                        </div>
+
+                        <div class="spotlight-card p-6 rounded-2xl bg-surface-900 border border-slate-800/90 flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
+                                <i class="ph-bold ph-code text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-1">2. Clean Development &amp; CMS Setup</h3>
+                                <p class="text-sm text-slate-400 leading-relaxed">Building modular WordPress themes, Elementor layouts, or custom Shopify Liquid sections that you can easily manage without developer lock-in.</p>
+                            </div>
+                        </div>
+
+                        <div class="spotlight-card p-6 rounded-2xl bg-surface-900 border border-slate-800/90 flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 shrink-0">
+                                <i class="ph-bold ph-rocket-launch text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-1">3. Speed, SEO &amp; Launch QA</h3>
+                                <p class="text-sm text-slate-400 leading-relaxed">Rigorous cross-device testing, image compression, payment gateway verification, and on-page SEO optimization for immediate traction.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialized Services Section -->
+        <section id="services" class="py-24 bg-surface-900 border-t border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal">
+                    <div class="max-w-2xl">
+                        <span class="font-mono text-xs uppercase tracking-widest text-brand-400 block mb-2">// 02. Services &amp; Solutions</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white">Tailored web solutions built to grow your revenue.</h2>
+                    </div>
+                    <p class="text-slate-400 text-sm md:text-base mt-4 md:mt-0 max-w-sm">
+                        Click any service below to pre-select it in the project inquiry form.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Service 1: E-Commerce Website -->
+                    <article class="spotlight-card p-7 rounded-2xl bg-surface-950 border border-slate-800/90 flex flex-col justify-between reveal delay-100">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6">
+                                <i class="ph-bold ph-shopping-cart text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">E-Commerce Website Development</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                End-to-end online stores engineered for high average order value, seamless product filtering, secure payment gateways, and mobile-first checkout flows.
+                            </p>
+                        </div>
+                        <button type="button" data-select-service="E-Commerce Website" class="service-trigger text-left text-sm font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-2 group mt-auto pt-4 border-t border-slate-800/80">
+                            <span>Select E-Commerce Service</span>
+                            <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </article>
+
+                    <!-- Service 2: Shopify Store Setup & Customization -->
+                    <article class="spotlight-card p-7 rounded-2xl bg-surface-950 border border-slate-800/90 flex flex-col justify-between reveal delay-200">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400 mb-6">
+                                <i class="ph-bold ph-bag text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Shopify Store Setup &amp; Custom Liquid</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Custom Shopify OS 2.0 theme development, bespoke Liquid sections, app integrations, product catalog structuring, and conversion rate optimization.
+                            </p>
+                        </div>
+                        <button type="button" data-select-service="Shopify Store Development" class="service-trigger text-left text-sm font-bold text-brand-400 hover:text-brand-300 flex items-center gap-2 group mt-auto pt-4 border-t border-slate-800/80">
+                            <span>Select Shopify Service</span>
+                            <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </article>
+
+                    <!-- Service 3: WordPress & WooCommerce -->
+                    <article class="spotlight-card p-7 rounded-2xl bg-surface-950 border border-slate-800/90 flex flex-col justify-between reveal delay-300">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-6">
+                                <i class="ph-bold ph-globe-hemisphere-west text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">WordPress &amp; WooCommerce Sites</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Custom corporate sites, dynamic blogs, and scalable WooCommerce stores built with clean Elementor architectures and zero plugin bloat.
+                            </p>
+                        </div>
+                        <button type="button" data-select-service="WordPress & WooCommerce" class="service-trigger text-left text-sm font-bold text-blue-400 hover:text-blue-300 flex items-center gap-2 group mt-auto pt-4 border-t border-slate-800/80">
+                            <span>Select WordPress Service</span>
+                            <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </article>
+
+                    <!-- Service 4: Landing Pages & UI Redesign -->
+                    <article class="spotlight-card p-7 rounded-2xl bg-surface-950 border border-slate-800/90 flex flex-col justify-between reveal delay-100">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-6">
+                                <i class="ph-bold ph-layout text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Landing Pages &amp; Figma to Web</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Translating Figma mockups into responsive, pixel-perfect landing pages designed to capture leads and maximize ad campaign ROI.
+                            </p>
+                        </div>
+                        <button type="button" data-select-service="Landing Page / UI Redesign" class="service-trigger text-left text-sm font-bold text-purple-400 hover:text-purple-300 flex items-center gap-2 group mt-auto pt-4 border-t border-slate-800/80">
+                            <span>Select Redesign Service</span>
+                            <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </article>
+
+                    <!-- Service 5: Speed & Technical SEO -->
+                    <article class="spotlight-card p-7 rounded-2xl bg-surface-950 border border-slate-800/90 flex flex-col justify-between reveal delay-200">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-6">
+                                <i class="ph-bold ph-gauge text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Speed &amp; Technical SEO Optimization</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Core Web Vitals optimization, script deferral, asset minification, and structured schema markup to boost organic search rankings.
+                            </p>
+                        </div>
+                        <button type="button" data-select-service="Speed & SEO Optimization" class="service-trigger text-left text-sm font-bold text-amber-400 hover:text-amber-300 flex items-center gap-2 group mt-auto pt-4 border-t border-slate-800/80">
+                            <span>Select Speed &amp; SEO</span>
+                            <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </article>
+
+                    <!-- Service 6: Custom Code & Maintenance -->
+                    <article class="spotlight-card p-7 rounded-2xl bg-surface-950 border border-slate-800/90 flex flex-col justify-between reveal delay-300">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-6">
+                                <i class="ph-bold ph-wrench text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Custom Code, Fixes &amp; Retainers</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Custom HTML5, CSS3, and JavaScript enhancements, theme debugging, API integrations, and reliable ongoing store management.
+                            </p>
+                        </div>
+                        <button type="button" data-select-service="Custom Code / Maintenance" class="service-trigger text-left text-sm font-bold text-cyan-400 hover:text-cyan-300 flex items-center gap-2 group mt-auto pt-4 border-t border-slate-800/80">
+                            <span>Select Custom Support</span>
+                            <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Technical Arsenal Section -->
+        <section id="skills" class="py-24 bg-surface-950 border-t border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                    <span class="font-mono text-xs uppercase tracking-widest text-brand-400 block mb-2">// 03. Technical Stack</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Core Platforms &amp; Technologies</h2>
+                    <p class="text-slate-400 text-sm md:text-base mt-3">
+                        Specialized in the world's leading CMS and e-commerce ecosystems, backed by clean frontend engineering.
+                    </p>
+                </div>
+
+                <!-- Primary Specialization Highlight Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 reveal">
+                    <div class="p-7 rounded-2xl bg-gradient-to-br from-blue-500/10 via-surface-900 to-surface-900 border border-blue-500/30 flex items-start gap-5">
+                        <div class="w-14 h-14 rounded-2xl bg-blue-500/20 border border-blue-400/30 flex items-center justify-center text-blue-400 shrink-0">
+                            <i class="ph-fill ph-microsoft-word-logo text-3xl"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <h3 class="text-xl font-bold text-white">WordPress Ecosystem</h3>
+                                <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">Core Expertise</span>
+                            </div>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                                Custom WordPress Websites, WooCommerce Storefronts, Elementor Pro Architecture, Custom Post Types (ACF), Speed Optimization, and Security Hardening.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">WordPress CMS</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">WooCommerce</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Elementor</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Technical SEO</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-7 rounded-2xl bg-gradient-to-br from-emerald-500/10 via-surface-900 to-surface-900 border border-emerald-500/30 flex items-start gap-5">
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-400 shrink-0">
+                            <i class="ph-fill ph-shopping-bag-open text-3xl"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <h3 class="text-xl font-bold text-white">Shopify Ecosystem</h3>
+                                <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Core Expertise</span>
+                            </div>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                                Shopify OS 2.0 Store Setup, Custom Liquid Templates, High-Converting Product Pages, Checkout &amp; Cart Drawer Optimization, and App Integrations.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Shopify OS 2.0</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Liquid</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">CRO</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Payment Gateways</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Supporting Frontend & Design Stack Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 reveal delay-200">
+                    <div class="p-5 bg-surface-900 border border-slate-800/80 rounded-2xl flex flex-col items-center text-center hover:border-brand-500/50 transition-all">
+                        <i class="ph ph-file-html text-3xl text-orange-400 mb-2"></i>
+                        <span class="text-sm font-semibold text-white">HTML5</span>
+                        <span class="text-xs text-slate-500 mt-0.5">Semantic Markup</span>
+                    </div>
+                    <div class="p-5 bg-surface-900 border border-slate-800/80 rounded-2xl flex flex-col items-center text-center hover:border-brand-500/50 transition-all">
+                        <i class="ph ph-file-css text-3xl text-sky-400 mb-2"></i>
+                        <span class="text-sm font-semibold text-white">CSS3 / Tailwind</span>
+                        <span class="text-xs text-slate-500 mt-0.5">Responsive UI</span>
+                    </div>
+                    <div class="p-5 bg-surface-900 border border-slate-800/80 rounded-2xl flex flex-col items-center text-center hover:border-brand-500/50 transition-all">
+                        <i class="ph ph-file-js text-3xl text-yellow-400 mb-2"></i>
+                        <span class="text-sm font-semibold text-white">JavaScript (ES6+)</span>
+                        <span class="text-xs text-slate-500 mt-0.5">Interactive DOM</span>
+                    </div>
+                    <div class="p-5 bg-surface-900 border border-slate-800/80 rounded-2xl flex flex-col items-center text-center hover:border-brand-500/50 transition-all">
+                        <i class="ph ph-figma-logo text-3xl text-pink-400 mb-2"></i>
+                        <span class="text-sm font-semibold text-white">Figma UI/UX</span>
+                        <span class="text-xs text-slate-500 mt-0.5">Design to Code</span>
+                    </div>
+                    <div class="p-5 bg-surface-900 border border-slate-800/80 rounded-2xl flex flex-col items-center text-center hover:border-brand-500/50 transition-all">
+                        <i class="ph ph-magnifying-glass text-3xl text-emerald-400 mb-2"></i>
+                        <span class="text-sm font-semibold text-white">On-Page SEO</span>
+                        <span class="text-xs text-slate-500 mt-0.5">Core Web Vitals</span>
+                    </div>
+                    <div class="p-5 bg-surface-900 border border-slate-800/80 rounded-2xl flex flex-col items-center text-center hover:border-brand-500/50 transition-all">
+                        <i class="ph ph-git-branch text-3xl text-purple-400 mb-2"></i>
+                        <span class="text-sm font-semibold text-white">Git &amp; GitHub</span>
+                        <span class="text-xs text-slate-500 mt-0.5">Version Control</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section with Interactive Filtering -->
+        <section id="projects" class="py-24 bg-surface-900 border-t border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6 reveal">
+                    <div>
+                        <span class="font-mono text-xs uppercase tracking-widest text-brand-400 block mb-2">// 04. Selected Work</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white">Featured E-Commerce &amp; Web Projects</h2>
+                    </div>
+
+                    <!-- Interactive Filter Buttons -->
+                    <div class="flex flex-wrap gap-2" role="tablist" aria-label="Filter projects by category">
+                        <button type="button" data-filter="all" class="project-filter-btn active px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider border border-brand-500 bg-brand-500 text-slate-950 font-bold transition-all">
+                            All Work
+                        </button>
+                        <button type="button" data-filter="shopify" class="project-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider border border-slate-800 bg-surface-950 text-slate-400 hover:text-white transition-all">
+                            Shopify
+                        </button>
+                        <button type="button" data-filter="wordpress" class="project-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider border border-slate-800 bg-surface-950 text-slate-400 hover:text-white transition-all">
+                            WordPress &amp; Woo
+                        </button>
+                        <button type="button" data-filter="custom" class="project-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider border border-slate-800 bg-surface-950 text-slate-400 hover:text-white transition-all">
+                            Custom UI
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+
+                    <!-- Project 1: Shopify Store -->
+                    <article data-category="shopify" class="project-card bg-surface-950 border border-slate-800/90 rounded-2xl overflow-hidden group flex flex-col transition-all duration-300 hover:border-emerald-500/50">
+                        <div class="relative overflow-hidden aspect-video bg-slate-900">
+                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Aura Minimalist Apparel Shopify Storefront" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-surface-950/90 text-emerald-400 border border-emerald-500/30 backdrop-blur-md">
+                                Shopify OS 2.0
+                            </span>
+                        </div>
+                        <div class="p-7 flex-1 flex flex-col">
+                            <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-2">
+                                <span>D2C Fashion Storefront</span>
+                                <span class="text-emerald-400">+38% Conversion</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Aura Minimalist Apparel</h3>
+                            <p class="text-slate-400 text-sm mb-6 flex-1 leading-relaxed">
+                                Custom Shopify storefront featuring slide-out AJAX cart upsells, size-guide modals, instant collection filtering, and sub-second page transitions.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-2.5 py-1 bg-surface-900 text-slate-300 text-xs rounded-md border border-slate-800">Shopify Liquid</span>
+                                <span class="px-2.5 py-1 bg-surface-900 text-slate-300 text-xs rounded-md border border-slate-800">Custom CSS3</span>
+                                <span class="px-2.5 py-1 bg-surface-900 text-slate-300 text-xs rounded-md border border-slate-800">CRO</span>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-800/80">
+                                <a href="#contact" data-select-service="Shopify Store Development" class="service-trigger text-xs font-bold text-white hover:text-brand-400 flex items-center gap-1.5 transition-colors">
+                                    <span>Request Similar Store</span>
+                                    <i class="ph-bold ph-arrow-up-right"></i>
+                                </a>
+                                <a href="https://github.com/zullqernainhaider" target="_blank" rel="noopener noreferrer" aria-label="View Code on GitHub" class="text-slate-400 hover:text-white transition-colors">
+                                    <i class="ph-bold ph-github-logo text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: WordPress & WooCommerce -->
+                    <article data-category="wordpress" class="project-card bg-surface-950 border border-slate-800/90 rounded-2xl overflow-hidden group flex flex-col transition-all duration-300 hover:border-blue-500/50">
+                        <div class="relative overflow-hidden aspect-video bg-slate-900">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="Veritas Organic Skincare WooCommerce Website" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-surface-950/90 text-blue-400 border border-blue-500/30 backdrop-blur-md">
+                                WordPress + Woo
+                            </span>
+                        </div>
+                        <div class="p-7 flex-1 flex flex-col">
+                            <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-2">
+                                <span>Full E-Commerce Store</span>
+                                <span class="text-blue-400">98 PageSpeed</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Veritas Botanicals Store</h3>
+                            <p class="text-slate-400 text-sm mb-6 flex-1 leading-relaxed">
+                                High-converting WooCommerce store built with custom Elementor templates, streamlined one-page checkout, and automated inventory syncing.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-2.5 py-1 bg-surface-900 text-slate-300 text-xs rounded-md border border-slate-800">WordPress</span>
+                                <span class="px-2.5 py-1 bg-surface-900 text-slate-300 text-xs rounded-md border border-slate-800">WooCommerce</span>
+                                <span class="px-2.5 py-1 bg-surface-900 text-slate-300 text-xs rounded-md border border-slate-800">Elementor</span>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-800/80">
+                                <a href="#contact" data-select-service="WordPress & WooCommerce" class="service-trigger text-xs font-bold text-white hover:text-brand-400 flex items-center gap-1.5 transition-colors">
+                                    <span>Request Similar Site</span>
+                                    <i class="ph-bold ph-arrow-up-right"></i>
+                                </a>
+                                <a href="https://github.com/zullqernainhaider" target="_blank" rel="noopener noreferrer" aria-label="View Code on GitHub" class="text-slate-400 hover:text-white transition-colors">
+                                    <i class="ph-bold ph-github-logo text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Corporate WordPress + Custom JS -->
+                    <article data-category="custom" class="project-card bg-surface-950 border border-slate-800/90 rounded-2xl overflow-hidden group flex flex-col transition-all duration-300 hover:border-brand-500/50">
+                        <div class="relative overflow-hidden aspect-video bg-slate-900">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="NexaScale B2B SaaS Landing Page" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-surface-950/90 text-brand-400 border border-brand-500/30 backdrop-blur-md">
+                                Custom Web + SEO
+                            </span>
+                        </div>
+                        <div class="p-7 flex-1 flex flex-col">
+                            <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-2">
+                                <span>B2B Lead Generation</span>
+                                <span class="text-brand-400">2.4x Lead Flow</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">NexaScale Agency Platform</h3>
+                            <p class="text-slate-400 text-sm mb-6 flex-1 leading-relaxed">
+                                Minimal corporate web platform converted from Figma with interactive ROI calculators, schema-rich service pages, and CRM lead capture.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-2.5 py-1 bg-surface-900 text-slate-300 text-xs rounded-md border border-slate-800">HTML5 / CSS3</span>
+                                <span class="px-2.5 py-1 bg-surface-900 text-slate-300 text-xs rounded-md border border-slate-800">JavaScript</span>
+                                <span class="px-2.5 py-1 bg-surface-900 text-slate-300 text-xs rounded-md border border-slate-800">WordPress CMS</span>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-800/80">
+                                <a href="#contact" data-select-service="Landing Page / UI Redesign" class="service-trigger text-xs font-bold text-white hover:text-brand-400 flex items-center gap-1.5 transition-colors">
+                                    <span>Request Similar Build</span>
+                                    <i class="ph-bold ph-arrow-up-right"></i>
+                                </a>
+                                <a href="https://github.com/zullqernainhaider" target="_blank" rel="noopener noreferrer" aria-label="View Code on GitHub" class="text-slate-400 hover:text-white transition-colors">
+                                    <i class="ph-bold ph-github-logo text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section with Interactive Services Selection -->
+        <section id="contact" class="py-24 bg-surface-950 border-t border-slate-800/80 relative">
+            <div class="max-w-5xl mx-auto px-6 lg:px-8 relative z-10">
+                <div class="bg-surface-900 border border-slate-800 rounded-3xl p-8 md:p-12 lg:p-14 shadow-2xl reveal">
+                    
+                    <div class="max-w-2xl mb-10">
+                        <span class="font-mono text-xs uppercase tracking-widest text-brand-400 block mb-2">// 05. Start a Project</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Let's build your next high-performing website.</h2>
+                        <p class="text-slate-400 text-base leading-relaxed">
+                            Select the services you need below and share a few details about your project. I respond to all inquiries within 24 hours.
+                        </p>
+                    </div>
+
+                    <form id="contact-form" class="space-y-8" novalidate>
+                        
+                        <!-- Interactive Services Selection (Multi-Select Chips) -->
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <label class="block text-sm font-semibold text-slate-200">
+                                    1. Select Required Services <span class="text-brand-400">*</span>
+                                </label>
+                                <span class="text-xs font-mono text-slate-400" id="service-count-badge">1 selected</span>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3" role="group" aria-label="Service Selection">
+                                
+                                <label class="service-chip cursor-pointer flex items-center gap-3 p-3.5 rounded-xl border border-slate-800 bg-surface-950/90 hover:border-slate-700 transition-all select-none">
+                                    <input type="checkbox" name="services" value="E-Commerce Website" class="sr-only" checked>
+                                    <span class="chip-box w-5 h-5 rounded-md border border-slate-600 flex items-center justify-center text-slate-950 transition-all">
+                                        <i class="ph-bold ph-check text-xs opacity-0 chip-check"></i>
+                                    </span>
+                                    <span class="text-sm font-medium text-slate-200">E-Commerce Website</span>
+                                </label>
+
+                                <label class="service-chip cursor-pointer flex items-center gap-3 p-3.5 rounded-xl border border-slate-800 bg-surface-950/90 hover:border-slate-700 transition-all select-none">
+                                    <input type="checkbox" name="services" value="Shopify Store Development" class="sr-only">
+                                    <span class="chip-box w-5 h-5 rounded-md border border-slate-600 flex items-center justify-center text-slate-950 transition-all">
+                                        <i class="ph-bold ph-check text-xs opacity-0 chip-check"></i>
+                                    </span>
+                                    <span class="text-sm font-medium text-slate-200">Shopify Store Setup</span>
+                                </label>
+
+                                <label class="service-chip cursor-pointer flex items-center gap-3 p-3.5 rounded-xl border border-slate-800 bg-surface-950/90 hover:border-slate-700 transition-all select-none">
+                                    <input type="checkbox" name="services" value="WordPress & WooCommerce" class="sr-only">
+                                    <span class="chip-box w-5 h-5 rounded-md border border-slate-600 flex items-center justify-center text-slate-950 transition-all">
+                                        <i class="ph-bold ph-check text-xs opacity-0 chip-check"></i>
+                                    </span>
+                                    <span class="text-sm font-medium text-slate-200">WordPress &amp; WooCommerce</span>
+                                </label>
+
+                                <label class="service-chip cursor-pointer flex items-center gap-3 p-3.5 rounded-xl border border-slate-800 bg-surface-950/90 hover:border-slate-700 transition-all select-none">
+                                    <input type="checkbox" name="services" value="Landing Page / UI Redesign" class="sr-only">
+                                    <span class="chip-box w-5 h-5 rounded-md border border-slate-600 flex items-center justify-center text-slate-950 transition-all">
+                                        <i class="ph-bold ph-check text-xs opacity-0 chip-check"></i>
+                                    </span>
+                                    <span class="text-sm font-medium text-slate-200">Landing Page / Redesign</span>
+                                </label>
+
+                                <label class="service-chip cursor-pointer flex items-center gap-3 p-3.5 rounded-xl border border-slate-800 bg-surface-950/90 hover:border-slate-700 transition-all select-none">
+                                    <input type="checkbox" name="services" value="Speed & SEO Optimization" class="sr-only">
+                                    <span class="chip-box w-5 h-5 rounded-md border border-slate-600 flex items-center justify-center text-slate-950 transition-all">
+                                        <i class="ph-bold ph-check text-xs opacity-0 chip-check"></i>
+                                    </span>
+                                    <span class="text-sm font-medium text-slate-200">Speed &amp; Technical SEO</span>
+                                </label>
+
+                                <label class="service-chip cursor-pointer flex items-center gap-3 p-3.5 rounded-xl border border-slate-800 bg-surface-950/90 hover:border-slate-700 transition-all select-none">
+                                    <input type="checkbox" name="services" value="Custom Code / Maintenance" class="sr-only">
+                                    <span class="chip-box w-5 h-5 rounded-md border border-slate-600 flex items-center justify-center text-slate-950 transition-all">
+                                        <i class="ph-bold ph-check text-xs opacity-0 chip-check"></i>
+                                    </span>
+                                    <span class="text-sm font-medium text-slate-200">Custom Code / Support</span>
+                                </label>
+
+                            </div>
+                            <p id="service-error" class="hidden text-xs text-rose-400 mt-2">Please select at least one service so I can tailor your proposal.</p>
+                        </div>
+
+                        <!-- Client Details & Platform Dropdown -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Your Name <span class="text-brand-400">*</span></label>
+                                <input type="text" id="name" name="name" required placeholder="Jane Doe" class="w-full bg-surface-950 border border-slate-800 rounded-xl px-4 py-3.5 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all text-sm">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email Address <span class="text-brand-400">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="jane@company.com" class="w-full bg-surface-950 border border-slate-800 rounded-xl px-4 py-3.5 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all text-sm">
+                            </div>
+                            <div>
+                                <label for="platform" class="block text-sm font-medium text-slate-300 mb-2">Preferred Platform / Scope</label>
+                                <select id="platform" name="platform" class="w-full bg-surface-950 border border-slate-800 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all text-sm">
+                                    <option value="Shopify Store (New or Redesign)">Shopify Store (New or Redesign)</option>
+                                    <option value="WordPress + WooCommerce E-Commerce">WordPress + WooCommerce E-Commerce</option>
+                                    <option value="WordPress Business / Portfolio Site">WordPress Business / Custom Site</option>
+                                    <option value="Custom Frontend (HTML/CSS/JS)">Custom Frontend (HTML / CSS / JS)</option>
+                                    <option value="Need Platform Recommendation">Not Sure — Recommend Best Fit</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Project Brief Textarea -->
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Project Goals, Timeline &amp; Details <span class="text-brand-400">*</span></label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Tell me about your business, target audience, reference websites, or timeline..." class="w-full bg-surface-950 border border-slate-800 rounded-xl px-4 py-3.5 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all resize-none text-sm"></textarea>
+                        </div>
+
+                        <!-- Submit & Direct Social Connect -->
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-6 pt-2">
+                            <button type="submit" class="w-full sm:w-auto bg-brand-500 hover:bg-brand-400 text-slate-950 font-bold py-4 px-9 rounded-full transition-all shadow-[0_0_25px_rgba(14,165,233,0.3)] flex items-center justify-center gap-2 text-sm">
+                                <span>Send Project Inquiry</span>
+                                <i class="ph-bold ph-paper-plane-tilt"></i>
+                            </button>
+
+                            <div class="flex items-center gap-4 text-sm text-slate-400">
+                                <span>Or connect directly:</span>
+                                <a href="https://linkedin.com/in/zullqernainhaider" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-white hover:text-brand-400 font-semibold transition-colors">
+                                    <i class="ph-fill ph-linkedin-logo text-brand-400 text-lg"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <span class="text-slate-700">&bull;</span>
+                                <a href="https://github.com/zullqernainhaider" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-white hover:text-brand-400 font-semibold transition-colors">
+                                    <i class="ph-fill ph-github-logo text-lg"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic Feedback Banner -->
+                        <div id="form-feedback" class="hidden p-4 rounded-2xl border border-emerald-500/40 bg-emerald-500/10 text-emerald-200 text-sm" role="status" aria-live="polite"></div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Optimized Copyright & Brand Footer -->
+    <footer class="bg-surface-950 pt-14 pb-10 border-t border-slate-800/80 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-10 border-b border-slate-800/70">
+                <div>
+                    <a href="#" class="text-lg font-extrabold tracking-tight text-white flex items-center gap-2.5">
+                        <span class="w-7 h-7 rounded-lg bg-brand-500 text-slate-950 font-mono text-xs font-bold flex items-center justify-center">ZH</span>
+                        <span>ZULLQERNAIN HAIDER</span>
+                    </a>
+                    <p class="text-slate-400 text-xs sm:text-sm mt-2 max-w-md">
+                        Website Developer specializing in high-converting WordPress websites, WooCommerce stores, and custom Shopify e-commerce solutions.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-6">
+                    <a href="#about" class="hover:text-white transition-colors">About</a>
+                    <a href="#services" class="hover:text-white transition-colors">Services</a>
+                    <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+                    <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                    <a href="https://linkedin.com/in/zullqernainhaider" target="_blank" rel="noopener noreferrer" class="hover:text-brand-400 transition-colors flex items-center gap-1">
+                        <i class="ph-fill ph-linkedin-logo"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/zullqernainhaider" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1">
+                        <i class="ph-fill ph-github-logo"></i> GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p>
+                    &copy; <span id="year">2026</span> <strong class="text-slate-300 font-medium">Zullqernain Haider</strong>. All rights reserved. 
+                </p>
+            
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js" defer></script>
 </body>
 </html>
